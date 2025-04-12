@@ -65,10 +65,6 @@ import lamp3 from './lamp3.jpg'
 
 
 
-
-
-
-
 export const services = [
     {
         title : "Furniture Selection",
@@ -124,7 +120,7 @@ export const WorksGallery = [
 
     { image: design26, col: 1, row: 2  , room: "dining" },
     { image: design9, col: 2, row: 2 , room: "kitchen"  },
-    { image: design3, col: 3, row: 3 , room: "living"  },
+    { image: design3, col: 3, row: 2 , room: "living"  },
 
     
     { image: design1, col: 2, row: 2  , room: "kitchen" },
@@ -132,9 +128,9 @@ export const WorksGallery = [
     { image: design16, col: 1, row: 2  , room: "dining" },
     { image: design17, col: 1, row: 2  , room: "living" },
     { image: design18, col: 1, row: 2  , room: "living" },
-    { image: design19, col: 1, row: 2  , room: "living" },
+    { image: design19, col: 2, row: 2  , room: "living" },
     { image: design21, col: 2, row: 2  , room: "kitchen" },
-    { image: design23, col: 2, row: 2 , room: "living"  },
+    { image: design23, col: 1, row: 2 , room: "living"  },
     { image: design24, col: 1, row: 2 , room: "living"  },
     { image: design25, col: 1, row: 2  , room: "living" },
     { image: design8, col: 1, row: 2  , room: "outdoor" },
@@ -162,188 +158,215 @@ export const WorksGallery = [
         title: "Master Chair", 
         price: 70, 
         image: chair1, 
-        description: "A comfortable and stylish chair for your living space." 
+        small: "Stylish and ergonomic seating.",
+        description: "A comfortable and stylish chair for your living space. Crafted with premium materials and a sleek finish, it blends seamlessly with modern decor. Its ergonomic back support and plush cushion make it perfect for long hours of reading, working, or relaxing. Whether placed in your living room or office, this chair adds a touch of sophistication and comfort to your everyday routine."
     },
     { 
         id: 2, 
         title: "Modern Bowl", 
         price: 25, 
         image: bowl1, 
-        description: "A sleek and minimalistic bowl, perfect for any room decor." 
+        small: "Minimal and elegant ceramic bowl.",
+        description: "A sleek and minimalistic bowl that enhances the aesthetic of any room. Made with durable ceramic and finished in a matte glaze, this bowl is both functional and decorative. Use it for snacks, potpourri, or as a standalone centerpiece. Its clean lines and neutral tones fit effortlessly into any home style."
     },
     { 
         id: 3, 
         title: "Potted Plant", 
         price: 40, 
         image: plant1, 
-        description: "Add some greenery to your home with this beautiful potted plant." 
+        small: "Fresh greenery for any room.",
+        description: "Add a refreshing touch of nature to your interior with this vibrant potted plant. Carefully selected for its lush greenery and low maintenance needs, this plant brings warmth and life into any environment. Housed in a chic pot that complements all decor styles, it’s ideal for desks, shelves, or coffee tables."
     },
     { 
         id: 4, 
         title: "Elegant Vase", 
         price: 57, 
         image: vase6, 
-        description: "A sophisticated vase that elevates any flower arrangement." 
+        small: "Sophisticated ceramic vase.",
+        description: "A sophisticated vase that elevates any flower arrangement with grace and charm. Crafted with high-quality ceramic and a smooth, matte finish, it serves as both a decorative piece and a functional container. Whether showcasing fresh flowers or standing empty, it draws attention and admiration."
     },
     { 
         id: 5, 
         title: "Art Print", 
         price: 60, 
         image: artprint5, 
-        description: "A stunning art print to bring character and style to your walls." 
+        small: "Bold and modern wall art.",
+        description: "A stunning art print that brings personality, depth, and modern flair to your walls. Printed on high-grade paper with vibrant, fade-resistant ink, this piece is perfect for creating a gallery wall or standing solo as a focal point. Designed to resonate with artistic minds and design lovers alike."
     },
     { 
         id: 6, 
         title: "Classic Chair", 
         price: 80, 
         image: chair2, 
-        description: "A timeless chair design that complements any interior style." 
+        small: "Timeless comfort and style.",
+        description: "A timeless chair design that complements any interior style. Its solid build, elegant lines, and classic upholstery make it a versatile choice for dining areas, offices, or reading nooks. Enjoy its dependable comfort and graceful silhouette as a staple in your space."
     },
     { 
         id: 7, 
         title: "Luxury Chair", 
         price: 85, 
         image: chair3, 
-        description: "A luxurious chair offering both comfort and elegance." 
+        small: "Premium seating experience.",
+        description: "A luxurious chair offering both comfort and elegance. Featuring premium fabric and precision stitching, it enhances your home with a sense of refined beauty. Whether you're entertaining guests or lounging, this chair offers a premium experience."
     },
     { 
         id: 8, 
         title: "Comfy Chair", 
         price: 90, 
         image: chair4, 
-        description: "Designed for relaxation, this chair is perfect for cozy spaces." 
+        small: "Perfect for cozy moments.",
+        description: "Designed for relaxation, this chair is perfect for cozy spaces. Its plush cushions and enveloping backrest invite you to sink in and unwind. Add it to a corner of your home to create the ultimate reading or meditation nook."
     },
     { 
         id: 9, 
         title: "Cozy Chair", 
         price: 95, 
         image: chair5, 
-        description: "A cozy chair that combines comfort and style for your living room." 
+        small: "Warm and inviting design.",
+        description: "A cozy chair that combines comfort and style for your living room. Its padded seat and elegant form provide a warm embrace after a long day. Pair it with a soft throw or cushion for maximum relaxation."
     },
     { 
         id: 10, 
         title: "Decorative Vase", 
         price: 35, 
         image: vase1, 
-        description: "A charming vase perfect for displaying your favorite flowers." 
+        small: "Simple charm for flowers.",
+        description: "A charming vase perfect for displaying your favorite flowers. Its graceful curves and neutral color make it suitable for any table, shelf, or mantel. An effortless way to elevate your floral displays."
     },
     { 
         id: 11, 
         title: "Glass Vase", 
         price: 40, 
         image: vase2, 
-        description: "A beautiful glass vase that adds a touch of elegance to any space." 
+        small: "Elegant and transparent vessel.",
+        description: "A beautiful glass vase that adds a touch of elegance to any space. With its clear, smooth surface and tall form, it catches light beautifully and complements any bouquet."
     },
     { 
         id: 12, 
         title: "Ceramic Vase", 
         price: 45, 
         image: vase3, 
-        description: "A handcrafted ceramic vase, ideal for bringing a rustic charm to your home." 
+        small: "Rustic handcrafted beauty.",
+        description: "A handcrafted ceramic vase, ideal for bringing a rustic charm to your home. Each piece is unique, with subtle variations that enhance its artisanal character."
     },
     { 
         id: 13, 
         title: "Tall Vase", 
         price: 50, 
         image: vase4, 
-        description: "A tall, elegant vase that works well as a statement piece." 
+        small: "Striking vertical decor.",
+        description: "A tall, elegant vase that works well as a statement piece. Whether filled with dried botanicals or left empty, it commands attention in any room."
     },
     { 
         id: 14, 
         title: "Floral Vase", 
         price: 55, 
         image: vase5, 
-        description: "A beautiful vase designed to enhance your floral arrangements." 
+        small: "Perfect for fresh blooms.",
+        description: "A beautiful vase designed to enhance your floral arrangements. With its flared opening and artistic design, it's the perfect complement for vibrant blooms."
     },
     { 
         id: 15, 
         title: "Small Bowl", 
         price: 30, 
         image: bowl2, 
-        description: "A small bowl perfect for snacks, fruit, or decorative use." 
+        small: "Compact and versatile bowl.",
+        description: "A small bowl perfect for snacks, fruit, or decorative use. The compact size and subtle glaze make it a versatile addition to your kitchen or coffee table."
     },
     { 
         id: 16, 
         title: "Succulent Plant", 
         price: 45, 
         image: plant2, 
-        description: "A low-maintenance succulent to brighten up your home or office." 
+        small: "Cute and easy to care for.",
+        description: "A low-maintenance succulent to brighten up your home or office. Its unique textures and earthy tones bring calm and freshness to any desk or shelf."
     },
     { 
         id: 17, 
         title: "Fern Plant", 
         price: 50, 
         image: plant3, 
-        description: "Add a touch of greenery with this vibrant and lush fern plant." 
+        small: "Air-purifying greenery.",
+        description: "Add a touch of greenery with this vibrant and lush fern plant. Known for its air-purifying qualities and decorative appeal, it’s an excellent choice for any room."
     },
     { 
         id: 18, 
         title: "Decor Plant", 
         price: 55, 
         image: plant4, 
-        description: "A perfect plant to enhance the natural ambiance of your space." 
+        small: "Stylish and sculptural.",
+        description: "A perfect plant to enhance the natural ambiance of your space. Its sculptural leaves and stylish pot make it a standout accessory in modern interiors."
     },
     { 
         id: 19, 
         title: "Wooden Shelf", 
         price: 100, 
         image: shelf1, 
-        description: "A stylish wooden shelf to organize and display your decor items." 
+        small: "Natural and functional wall storage.",
+        description: "A stylish wooden shelf to organize and display your decor items. Crafted from solid wood, it adds warmth and character to any wall while offering functional storage."
     },
     { 
         id: 20, 
         title: "Metal Shelf", 
         price: 120, 
         image: shelf2, 
-        description: "A sleek metal shelf that provides both storage and modern style." 
+        small: "Sleek and modern storage solution.",
+        description: "A sleek metal shelf that provides both storage and modern style. Its minimalist frame and open design make it ideal for books, plants, and more."
     },
     { 
         id: 21, 
         title: "Abstract Art", 
         price: 65, 
         image: artprint1, 
-        description: "A contemporary abstract print that adds creativity to any room." 
+        small: "Bold and colorful expression.",
+        description: "A contemporary abstract print that adds creativity to any room. Its bold shapes and vivid colors energize the space, sparking imagination and conversation."
     },
     { 
         id: 22, 
         title: "Framed Art", 
         price: 70, 
         image: artprint2, 
-        description: "A beautifully framed print to make a bold statement in your space." 
+        small: "Ready-to-hang statement piece.",
+        description: "A beautifully framed print to make a bold statement in your space. The frame's premium finish enhances the artwork, adding depth and elegance."
     },
     { 
         id: 23, 
         title: "Nature Art", 
         price: 75, 
         image: artprint3, 
-        description: "A stunning nature-inspired art print that brings serenity to your home." 
+        small: "Tranquil nature-inspired art.",
+        description: "A stunning nature-inspired art print that brings serenity to your home. The tranquil imagery and soft color palette make it perfect for bedrooms and living rooms."
     },
     { 
         id: 24, 
         title: "Minimal Art", 
         price: 80, 
         image: artprint4, 
-        description: "A minimalist art print that creates a calm and balanced atmosphere." 
+        small: "Subtle, refined wall decor.",
+        description: "A minimalist art print that creates a calm and balanced atmosphere. Its subtle tones and simple composition bring sophistication without overwhelming the space."
     },
     { 
         id: 25, 
         title: "Table Lamp", 
         price: 60, 
         image: lamp1, 
-        description: "A stylish table lamp that adds warmth and elegance to your space." 
+        small: "Elegant lighting for desks.",
+        description: "A stylish table lamp that adds warmth and elegance to your space. With a soft-glow bulb and refined shade, it creates the perfect mood for reading or relaxing."
     },
     { 
         id: 26, 
         title: "Standing Lamp", 
         price: 65, 
         image: lamp2, 
-        description: "A modern standing lamp with adjustable height for versatile lighting." 
+        small: "Modern adjustable lighting.",
+        description: "A modern standing lamp with adjustable height for versatile lighting. Its sleek base and clean design make it a favorite for contemporary homes."
     },
     { 
         id: 27, 
         title: "Floor Lamp", 
         price: 70, 
         image: lamp3, 
-        description: "A tall, sleek floor lamp to brighten up any corner of your room." 
+        small: "Tall, sleek ambient light.",
+        description: "A tall, sleek floor lamp to brighten up any corner of your room. With a minimalist frame and powerful light, it’s both functional and fashionable."
     }
 ];
