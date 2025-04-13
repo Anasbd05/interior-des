@@ -1,10 +1,11 @@
 "use client"
-import {Input} from '@/components/ui/Input'
+import {Input} from '@/components/ui/input'
 import {ArrowLeftCircle,BadgeCheck,BaggageClaim,ShoppingCart,Truck,Wallet} from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {useRouter} from 'next/navigation'
 import React,{useState} from 'react'
+import {toast} from 'react-toastify'
 import {useCart} from 'react-use-cart'
 
 const CheckoutPage = () => {
@@ -17,9 +18,16 @@ const CheckoutPage = () => {
 
     const {items,cartTotal} = useCart()
     const Total = cartTotal - 20
-
-
     const router = useRouter()
+
+    const handleClick = () => {
+        if(name && city && address && number !== "") {
+            toast.success("order has created")
+        } else {
+            toast.error('Make sure to fill all the informations')
+        }
+
+    }
 
     return (
 
@@ -50,12 +58,12 @@ const CheckoutPage = () => {
                                 <h1 className='text-2xl font-bold font-header'>Shipping address</h1>
                             </div>
                             <div className='flex w-full gap-4'>
-                                <Input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='First_Name *' className='w-2/4 py-3 px-3 rounded-md  border border-accent  outline-none bg-white shadow-md placeholder:text-xs' />
-                                <Input type="text" placeholder='Last_Name *' className='w-2/4 py-3 px-3 rounded-md border border-accent  outline-none bg-white shadow-md placeholder:text-xs' />
+                                <Input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='First_Name *' className='w-2/4 ' />
+                                <Input type="text" placeholder='Last_Name *' className='w-2/4 ' />
                             </div>
-                            <Input value={city} onChange={(e) => setCity(e.target.value)} type="text" placeholder='City *' className='py-3 px-3  border border-accent  rounded-md outline-none bg-white shadow-md placeholder:text-xs' />
-                            <Input value={address} onChange={(e) => setAddress(e.target.value)} type="text" placeholder='Address *' className='py-3.5 px-3  border border-accent  rounded-md outline-none bg-white shadow-md placeholder:text-xs' />
-                            <Input value={number} onChange={(e) => setNumber(e.target.value)} type="text" placeholder='Phone number *' className='py-3.5 px-3  border border-accent  rounded-md outline-none bg-white shadow-md placeholder:text-xs' />
+                            <Input value={city} onChange={(e) => setCity(e.target.value)} type="text" placeholder='City *' className='' />
+                            <Input value={address} onChange={(e) => setAddress(e.target.value)} type="text" placeholder='Address *' className='' />
+                            <Input value={number} onChange={(e) => setNumber(e.target.value)} type="text" placeholder='Phone number *' className='' />
                         </main>
 
                         {/* Commande checking */}
@@ -106,9 +114,9 @@ const CheckoutPage = () => {
                             <h2 className='font-bold text-lg'>Total</h2>
                             <small className='font-semibold'>{Total} DH</small>
                         </div>
-                        <Link href={"checkout"} className='flex justify-center bg-black text-white py-1.5 px-6 my-3 hover:opacity-80 cursor-pointer rounded-sm w-28'>
+                        <button onClick={handleClick} className='flex justify-center bg-black text-white py-1.5 px-6 my-3 hover:opacity-80 cursor-pointer rounded-sm w-28'>
                             Buy Now
-                        </Link>
+                        </button>
                     </main>
                 </main>
             </section>

@@ -3,6 +3,7 @@ import {Lato} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ContextProvider from "@/context/ContextProvider";
+import {ToastContainer} from "react-toastify";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Navbar />
           <div className="mt-20">
             {children}
+            <ToastContainer />
           </div>
         </ContextProvider>
       </body>
