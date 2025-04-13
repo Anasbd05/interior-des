@@ -6,13 +6,8 @@ import Link from 'next/link'
 import React from 'react'
 import {useCart} from 'react-use-cart'
 
-interface PageProps {
-    params: {
-        title: string
-    }
-}
 
-const ProductPage = ({params}: PageProps) => {
+const ProductPage = ({params}: {params: Promise<{title: string}>}) => {
     const {title} = React.use(params)
     const product = ProductGallery.find((item) => item.title.replaceAll(' ','') === title.replaceAll(' ',''))
 

@@ -12,7 +12,7 @@ interface PageProps {
     }
 }
 
-const WorkPage = ({params}: PageProps) => {
+const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
     const {title} = React.use(params)
     const work = WorksGallery.find((item) => item.title?.replaceAll(' ','') === title.replaceAll(' ',''))
 
