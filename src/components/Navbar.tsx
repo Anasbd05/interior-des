@@ -22,7 +22,7 @@ const Navbar = () => {
                 <Link className='hover:text-accent text-white' href={"/store"}>Store</Link>
                 <Link className='hover:text-accent text-white' href={"/works"}>Our works</Link>
             </div>
-            <Link href={'shoppingcart'} className="md:flex hidden  relative">
+            <Link href={'/shoppingcart'} className="md:flex hidden  relative">
                 {items.length > 0 && (
                     <small className='bg-red-600 text-white text-xs w-4 flex items-center justify-center h-4 rounded-full absolute -top-2 -right-2'>
                         {items.length}
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className="flex flex-col gap-4  bg-[#151B06] h-screen w-2/4 absolute top-18 right-0 p-5 md:hidden">
                     <Link onClick={toggleMenu} className='hover:text-accent text-lg font-bold py-3 text-white' href={"/store"}>Store</Link>
                     <Link onClick={toggleMenu} className='hover:text-accent text-lg font-bold py-3 text-white' href={"/works"}>Our works</Link>
-                    <Link onClick={toggleMenu} href={'shoppingcart'} className="flex relative">
+                    <Link onClick={toggleMenu} href={'/shoppingcart'} className="flex relative">
                         {items.length > 0 && (
                             <small className='bg-red-600 text-white text-xs w-4 flex items-center justify-center h-4 rounded-full absolute -top-2 right-34'>
                                 {items.length}

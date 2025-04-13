@@ -19,7 +19,7 @@ const Shopping = () => {
             <section className='my-10 w-4/6 mx-auto'>
                 {isEmpty ? <div className='w-full flex flex-col gap-2 h-[400px] items-center justify-center '>
                     <h1 className='font-header text-2xl sm:text-3xl  text-center font-bold'>OOOOPS! YOUR CART IS EMPTY</h1>
-                    <Link className='w-36 py-2 bg-black text-white rounded-lg flex items-center justify-center' href={"/shoes"}>GO SHOP</Link>
+                    <Link className='w-36 py-2 bg-black text-white rounded-lg flex items-center justify-center' href={"/store"}>GO SHOP</Link>
                 </div> : <>
                     <h1 className='text-center text-4xl font-bold font-header'>Your cart</h1>
                     <div className="flex flex-col mt-8 gap-4">
@@ -66,7 +66,7 @@ const Shopping = () => {
                             <h2 className='font-bold text-lg'>Total</h2>
                             <small className='font-semibold'>{Total} DH</small>
                         </div>
-                        <Link href={"checkout"} className='flex justify-center bg-black text-white py-1.5 px-6 my-3 hover:opacity-80 cursor-pointer rounded-sm w-28'>
+                        <Link href={"/checkout"} className='flex justify-center bg-black text-white py-1.5 px-6 my-3 hover:opacity-80 cursor-pointer rounded-sm w-28'>
                             Checkout
                         </Link>
                     </main>

@@ -42,7 +42,7 @@ const WorkPage = ({params}: PageProps) => {
                     <Link
                         href={`/works/${item.title?.replaceAll(' ','')}`}
                         key={index}
-                        className={`relative col-span-${item.col} row-span-${item.row}`}
+                        className={`relative lg:col-span-${item.col} lg:row-span-${item.row}`}
                     >
                         <div className="relative w-full h-full">
                             <Image
