@@ -16,8 +16,8 @@ type Product = {
     category: string;
 };
 
-const ProductPage = ({params}: {params: {title: string}}) => {
-    const {title} = params;
+const ProductPage = ({params}: {params: Promise<{title: string}>}) => {
+    const {title} = React.use(params)
 
     const product = ProductGallery.find((item) =>
         item.title.replaceAll(' ','') === title.replaceAll(' ','')

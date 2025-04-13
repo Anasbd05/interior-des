@@ -9,6 +9,7 @@ import React from 'react'
 
 const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
     const {title} = React.use(params)
+
     const work = WorksGallery.find((item) => item.title?.replaceAll(' ','') === title.replaceAll(' ',''))
 
     const relatedProducts = WorksGallery.filter((item) => item.room === work?.room)
