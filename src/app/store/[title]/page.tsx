@@ -1,25 +1,37 @@
 "use client"
 import {ProductGallery} from '@/assets/assets'
 import {Star} from 'lucide-react'
-import Image from 'next/image'
+import Image,{StaticImageData} from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import {useCart} from 'react-use-cart'
 
+type Product = {
+    id: string;
+    title: string;
+    price: number;
+    image: StaticImageData;
+    small: string;
+    description: string;
+    category: string;
+};
 
-const ProductPage = ({params}: {params: Promise<{title: string}>}) => {
-    const {title} = React.use(params)
-    const product = ProductGallery.find((item) => item.title.replaceAll(' ','') === title.replaceAll(' ',''))
+const ProductPage = ({params}: {params: {title: string}}) => {
+    const {title} = params;
 
-    const {addItem,items,inCart,removeItem} = useCart()
-    console.log(items)
+    const product = ProductGallery.find((item) =>
+        item.title.replaceAll(' ','') === title.replaceAll(' ','')
+    );
+
+    const {addItem,items,inCart,removeItem} = useCart();
+    console.log(items);
 
     if(!product) {
         return (
             <section className="w-full flex justify-center items-center h-screen">
                 <h2 className="text-2xl font-bold">Produit introuvable</h2>
             </section>
-        )
+        );
     }
 
     return (
@@ -46,21 +58,39 @@ const ProductPage = ({params}: {params: Promise<{title: string}>}) => {
                         <span className="text-3xl text-accent mb-4 font-mono font-semibold">{product.price} DH</span>
                         <p className="text-lg text-neutral-700">{product.description}</p>
                     </div>
-                    {inCart(product.id) ?
-                        <button onClick={() => removeItem(product.id)} className='bg-red-500 text-white font-bold py-2 mb-4 cursor-pointer hover:opacity-80 rounded-sm'>Remove form cart</button> :
-                        <button onClick={() => addItem(product)} className='bg-accent text-white  font-bold py-2 mb-4 cursor-pointer hover:opacity-80 rounded-sm'>Add to cart</button>
-                    }
+                    {inCart(String(product.id)) ? (
+                        <button
+                            onClick={() => removeItem(String(product.id))}
+                            className="bg-red-500 text-white font-bold py-2 mb-4 cursor-pointer hover:opacity-80 rounded-sm"
+                        >
+                            Remove from cart
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => addItem(product as Product)}
+                            className="bg-accent text-white font-bold py-2 mb-4 cursor-pointer hover:opacity-80 rounded-sm"
+                        >
+                            Add to cart
+                        </button>
+                    )}
                 </div>
             </div>
-            <div className="lg:flex justify-center hidden  relative my-4 gap-1">
-                <h1 className='text-3xl font-header  font-bold'>Related Products</h1>
+
+            <div className="lg:flex justify-center hidden relative my-4 gap-1">
+                <h1 className='text-3xl font-header font-bold'>Related Products</h1>
                 <div className="flex absolute top-4 right-[430px] gap-0">
-                    <hr className='bg-neutral-600  border-0 w-10 h-1' />
-                    <hr className='bg-neutral-300  border-0 w-10 h-1' />
+                    <hr className='bg-neutral-600 border-0 w-10 h-1' />
+                    <hr className='bg-neutral-300 border-0 w-10 h-1' />
                 </div>
-            </div>            <div className="grid grid-cols-2 md:grid-cols-3 py-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 space-y-2">
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 py-4 lg:grid-cols-4 xl:grid-cols-5 gap-2 space-y-2">
                 {ProductGallery.slice(0,5).map((product) => (
-                    <Link href={`/store/${product.title.replaceAll(' ','')}`} key={product.id} className="flex flex-col gap-2 p-2">
+                    <Link
+                        href={`/store/${product.title.replaceAll(' ','')}`}
+                        key={product.id}
+                        className="flex flex-col gap-2 p-2"
+                    >
                         <Image
                             src={product.image}
                             alt={product.title}
@@ -77,7 +107,7 @@ const ProductPage = ({params}: {params: Promise<{title: string}>}) => {
                 ))}
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default ProductPage
+export default ProductPage;

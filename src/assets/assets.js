@@ -160,7 +160,7 @@ export const WorksGallery = [
     
   export const ProductGallery = [
     { 
-        id: 1, 
+        id:" 1", 
         title: "Master Chair", 
         price: 70, 
         image: chair1, 
@@ -169,7 +169,7 @@ export const WorksGallery = [
         category: "Chairs"
     },
     { 
-        id: 2, 
+        id:" 2", 
         title: "Modern Bowl", 
         price: 25, 
         image: bowl1, 
@@ -178,7 +178,7 @@ export const WorksGallery = [
         category: "Bowls"
     },
     { 
-        id: 3, 
+        id:" 3", 
         title: "Potted Plant", 
         price: 40, 
         image: plant1, 
@@ -187,7 +187,7 @@ export const WorksGallery = [
         category: "Plants"
     },
     { 
-        id: 4, 
+        id:" 4", 
         title: "Elegant Vase", 
         price: 57, 
         image: vase6, 
@@ -196,7 +196,7 @@ export const WorksGallery = [
         category: "Vases"
     },
     { 
-        id: 5, 
+        id:" 5", 
         title: "Art Print", 
         price: 60, 
         image: artprint5, 
@@ -205,7 +205,7 @@ export const WorksGallery = [
         category: "Art"
     },
     { 
-        id: 6, 
+        id:" 6", 
         title: "Classic Chair", 
         price: 80, 
         image: chair2, 
@@ -214,7 +214,7 @@ export const WorksGallery = [
         category: "Chairs"
     },
     { 
-        id: 7, 
+        id:" 7", 
         title: "Luxury Chair", 
         price: 85, 
         image: chair3, 
@@ -223,7 +223,7 @@ export const WorksGallery = [
         category: "Chairs"
     },
     { 
-        id: 8, 
+        id:" 8", 
         title: "Comfy Chair", 
         price: 90, 
         image: chair4, 
@@ -232,7 +232,7 @@ export const WorksGallery = [
         category: "Chairs"
     },
     { 
-        id: 9, 
+        id:" 9", 
         title: "Cozy Chair", 
         price: 95, 
         image: chair5, 
@@ -241,7 +241,7 @@ export const WorksGallery = [
         category: "Chairs"
     },
     { 
-        id: 10, 
+        id: "10", 
         title: "Decorative Vase", 
         price: 35, 
         image: vase1, 
@@ -250,7 +250,7 @@ export const WorksGallery = [
         category: "Vases"
     },
     { 
-        id: 11, 
+        id: "11", 
         title: "Glass Vase", 
         price: 40, 
         image: vase2, 
@@ -259,7 +259,7 @@ export const WorksGallery = [
         category: "Vases"
     },
     { 
-        id: 12, 
+        id: "12", 
         title: "Ceramic Vase", 
         price: 45, 
         image: vase3, 
@@ -268,7 +268,7 @@ export const WorksGallery = [
         category: "Vases"
     },
     { 
-        id: 13, 
+        id: "13", 
         title: "Tall Vase", 
         price: 50, 
         image: vase4, 
@@ -277,7 +277,7 @@ export const WorksGallery = [
         category: "Vases"
     },
     { 
-        id: 14, 
+        id: "14", 
         title: "Floral Vase", 
         price: 55, 
         image: vase5, 
@@ -295,7 +295,7 @@ export const WorksGallery = [
         category: "Bowls"
     },
     { 
-        id: 16, 
+        id: "16", 
         title: "Succulent Plant", 
         price: 45, 
         image: plant2, 
@@ -313,7 +313,7 @@ export const WorksGallery = [
         category: "Planters"
     },
     { 
-        id: 18, 
+        id: "18", 
         title: "Decor Plant", 
         price: 55, 
         image: plant4, 
@@ -322,7 +322,7 @@ export const WorksGallery = [
         category: "Planters"
     },
     { 
-        id: 19, 
+        id: "19", 
         title: "Wooden Shelf", 
         price: 100, 
         image: shelf1, 
@@ -331,7 +331,7 @@ export const WorksGallery = [
         category: "Shelfs"
     },
     { 
-        id: 20, 
+        id: "20", 
         title: "Metal Shelf", 
         price: 120, 
         image: shelf2, 
@@ -340,7 +340,7 @@ export const WorksGallery = [
         category: "Shelfs"
     },
     { 
-        id: 21, 
+        id: "21", 
         title: "Abstract Art", 
         price: 65, 
         image: artprint1, 
@@ -349,7 +349,7 @@ export const WorksGallery = [
         category: "Art"
     },
     { 
-        id: 22, 
+        id: "22", 
         title: "Framed Art", 
         price: 70, 
         image: artprint2, 
@@ -358,7 +358,7 @@ export const WorksGallery = [
         category: "Art"
     },
     { 
-        id: 23, 
+        id: "23", 
         title: "Nature Art", 
         price: 75, 
         image: artprint3, 
@@ -367,7 +367,7 @@ export const WorksGallery = [
         category: "Art"
     },
     { 
-        id: 24, 
+        id: "24", 
         title: "Minimal Art", 
         price: 80, 
         image: artprint4, 
@@ -376,7 +376,7 @@ export const WorksGallery = [
         category: "Art"
     },
     { 
-        id: 25, 
+        id: "25", 
         title: "Table Lamp", 
         price: 60, 
         image: lamp1, 
@@ -385,7 +385,7 @@ export const WorksGallery = [
         category: "Lamps"
     },
     { 
-        id: 26, 
+        id: "26", 
         title: "Standing Lamp", 
         price: 65, 
         image: lamp2, 
@@ -394,7 +394,7 @@ export const WorksGallery = [
         category: "Lamps"
     },
     { 
-        id: 27, 
+        id: "27", 
         title: "Floor Lamp", 
         price: 70, 
         image: lamp3, 

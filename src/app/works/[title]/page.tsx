@@ -20,7 +20,13 @@ const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
         <section className='w-11/12 mx-auto py-6'>
             <div className="flex flex-col gap-2 mx-auto md:w-4/5">
                 <ArrowLeftCircle onClick={() => router.back()} className='my-2 w-8 h-8' />
-                <Image className='w-full mx-auto rounded-sm md:h-[600px] object-center ' alt='' src={work?.image} />
+                {work?.image && (
+                    <Image
+                        className='w-full mx-auto rounded-sm md:h-[600px] object-center'
+                        alt={work.title || 'Work Image'}
+                        src={work.image}
+                    />
+                )}
                 <Link target='_blank' href={"https://api.whatsapp.com/message/B5FEDOQRNKHQN1?autoload=1&app_absent=0"} className='bg-black text-white py-3 w-full mt-3 rounded-md flex gap-2 justify-center items-center'>Contact Us <PhoneCall className='text-green-500 w-4 h-4' /> </Link>
             </div>
 
