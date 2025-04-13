@@ -2,7 +2,6 @@
 import {Input} from '@/components/ui/input'
 import {ArrowLeftCircle,BadgeCheck,BaggageClaim,ShoppingCart,Truck,Wallet} from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import {useRouter} from 'next/navigation'
 import React,{useState} from 'react'
 import {toast} from 'react-toastify'
