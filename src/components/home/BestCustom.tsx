@@ -12,7 +12,7 @@ const BestCustom = () => {
                     .map((work,index) => (
                         <Link href={`/works/${work.title?.replaceAll(' ',"")}`}
                             key={index}
-                            className={`relative md:col-span-${work.col} md:row-span-${work.row}`}
+                            className={`relative md:col-span-${work.col} row-span-${work.row}`}
                         >
                             <Image
                                 src={work.image}
@@ -23,7 +23,7 @@ const BestCustom = () => {
                         </Link>
                     ))}
             </main>
-            <button className='bg-accent font-bold text-white py-2 w-full my-3 px-6 hover:opacity-80 animate-pulse '>View all works</button>
+            <Link href={"/works"} className='bg-accent font-bold text-white py-2 w-full flex justify-center my-3 hover:opacity-80 animate-pulse'>View all works</Link>
         </section>
     )
 }

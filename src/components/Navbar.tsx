@@ -23,11 +23,12 @@ const Navbar = () => {
                 <Link className='hover:text-accent text-white' href={"/works"}>Our works</Link>
             </div>
             <Link href={'/shoppingcart'} className="md:flex hidden  relative">
-                {items.length > 0 && (
-                    <small className='bg-red-600 text-white text-xs w-4 flex items-center justify-center h-4 rounded-full absolute -top-2 -right-2'>
+                {items.length > 0 ? (
+                    <small
+                        className='bg-red-600 text-white text-xs w-4 flex items-center justify-center h-4 rounded-full absolute -top-2 -right-2'>
                         {items.length}
                     </small>
-                )}
+                ) : ""}
                 <ShoppingBag className='text-white hover:text-accent' />
             </Link>
 
