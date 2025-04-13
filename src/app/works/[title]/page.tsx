@@ -28,11 +28,11 @@ const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
                         src={work.image}
                     />
                 )}
-                <Link target='_blank' href={"https://api.whatsapp.com/message/B5FEDOQRNKHQN1?autoload=1&app_absent=0"} className='bg-black text-white py-3 w-full mt-3 rounded-md flex gap-2 justify-center items-center'>Contact Us <PhoneCall className='text-green-500 w-4 h-4' /> </Link>
+                <Link target='_blank' href={"https://api.whatsapp.com/message/B5FEDOQRNKHQN1?autoload=1&app_absent=0"} className='bg-black hover:opacity-80 text-white py-3 w-full mt-3 rounded-md flex gap-2 justify-center items-center'>Contact Us <PhoneCall className='text-green-500 w-4 h-4' /> </Link>
             </div>
 
             <div className="lg:flex justify-center hidden  relative my-4 gap-1">
-                <h1 className='text-3xl font-header  font-bold'>Related Products</h1>
+                <h1 className='text-3xl font-header font-bold'>Related Products</h1>
                 <div className="flex absolute top-4 right-[390px] gap-0">
                     <hr className='bg-neutral-600  border-0 w-10 h-1' />
                     <hr className='bg-neutral-300  border-0 w-10 h-1' />
@@ -44,7 +44,7 @@ const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
                     <Link
                         href={`/works/${item.title?.replaceAll(' ','')}`}
                         key={index}
-                        className={`relative lg:col-span-${item.col} lg:row-span-${item.row}`}
+                        className={`relative col-span-1 row-span-2 md:col-span-${item.col} md:row-span-${item.row}`}
                     >
                         <div className="relative w-full h-full">
                             <Image
@@ -57,7 +57,7 @@ const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
                     </Link>
                 ))}
             </main>
-        </section>
+        </section >
     )
 }
 
