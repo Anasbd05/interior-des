@@ -1,8 +1,8 @@
 import type {Metadata} from "next";
 import {Lato} from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/home/Footer";
 import Navbar from "@/components/Navbar";
+import ContextProvider from "@/context/ContextProvider";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -24,9 +24,12 @@ export default function RootLayout({
       <body cz-shortcut-listen="true"
         className={`${lato.className} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <ContextProvider>
+          <Navbar />
+          <div className="mt-20">
+            {children}
+          </div>
+        </ContextProvider>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {Facebook,Heart,Instagram,PhoneCall} from 'lucide-react';
 const Footer = () => {
     return (
-        <footer className="bg-gray-100 mt-10 py-10  flex flex-col">
+        <footer className="bg-gray-100 mt-10 py-10 z-50 flex flex-col">
             <section className="flex flex-col gap-4 py-6 md:flex-row justify-between items-start px-12">
                 <div className="flex flex-col gap-3 ">
                     <h1 className="font-bold text-4xl font-header tracking-wide text-accent">
@@ -33,7 +33,6 @@ const Footer = () => {
                 <p className='text-center'> Made with by</p>
                 <Heart className='text-red-600' fontSize='medium' />
                 <Link href={"https://www.instagram.com/vnas_trying/"} target='_blank' className='text-accent'>Anas_bd</Link>
-
             </div>
         </footer>
     )
