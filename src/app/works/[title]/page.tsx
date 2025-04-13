@@ -6,11 +6,6 @@ import Link from 'next/link'
 import {useRouter} from 'next/navigation'
 import React from 'react'
 
-interface PageProps {
-    params: {
-        title: string
-    }
-}
 
 const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
     const {title} = React.use(params)
