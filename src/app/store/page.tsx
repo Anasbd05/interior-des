@@ -87,7 +87,7 @@ const StorePage = () => {
                 </aside>
 
                 {/* Product Grid */}
-                <div className="ml-auto w-full lg:w-5/6 grid grid-cols-2 md:grid-cols-3 py-4 lg:grid-cols-4 gap-2 space-y-2">
+                <div className="ml-auto w-full lg:w-5/6 grid grid-cols-2 md:grid-cols-3 py-4 lg:grid-cols-4 gap-1 space-y-2">
                     {filteredAndSortedProducts.map((product) => (
                         <Link href={`/store/${product.title.replaceAll(' ','')}`} key={product.id} className="flex flex-col gap-2 p-2">
                             <Image

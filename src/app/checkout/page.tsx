@@ -22,6 +22,10 @@ const CheckoutPage = () => {
     const handleClick = () => {
         if(name && city && address && number !== "") {
             toast.success("order has created")
+            setAddress('')
+            setName('')
+            setCity('')
+            setNumber('')
         } else {
             toast.error('Make sure to fill all the informations')
         }

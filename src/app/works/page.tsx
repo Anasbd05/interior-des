@@ -24,7 +24,7 @@ const WorksPage = () => {
                     <button onClick={() => setFilter('dining')} className={`bg-accent text-white py-1 px-4 rounded-md font-semibold ${filter === "dining" && "bg-black text-white"}`}>Dining Rooms</button>
                 </main>
             </div>
-            <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[200px] sm:gap-4 lg:gap-2 my-8">
+            <main className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[100px] md:auto-rows-[200px] sm:gap-4 lg:gap-2 my-8">
                 {WorksGallery.filter((item) => filter === 'all' || item.room === filter)
                     .slice(0,15)
                     .map((item,index) => (
@@ -58,9 +58,10 @@ const WorksPage = () => {
                         ))
                 }
             </main>
-            <div className='w-full flex justify-center'>
+            {filter === "all" && <div className='w-full flex justify-center'>
                 <button onClick={() => setShow(true)} className={`bg-accent animate-bounce cursor-pointer hover:opacity-80 text-white py-2 px-10 rounded-sm ${show === true ? "hidden" : "flex"}`}>Show more</button>
             </div>
+            }
         </section >
     )
 }

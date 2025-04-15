@@ -39,7 +39,7 @@ const WorkPage = ({params}: {params: Promise<{title: string}>}) => {
                 </div>
             </div>
 
-            <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[200px] sm:gap-4 lg:gap-2 my-8">
+            <main className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-[100px] md:auto-rows-[200px] sm:gap-4 lg:gap-2 my-8">
                 {relatedProducts.map((item,index) => (
                     <Link
                         href={`/works/${item.title?.replaceAll(' ','')}`}
